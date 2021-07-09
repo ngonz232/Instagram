@@ -108,7 +108,7 @@ public class ProfileFragment extends Fragment {
             user.put("photo", new ParseFile(photoFile));
             user.saveInBackground();
         } else {
-            Toast.makeText(getContext(), "Picture wasn't taken!", Toast.LENGTH_SHORT).show();
+
         }
     }
 
