@@ -56,7 +56,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipeContainer"
         android:layout_below="@id/appBar"
         android:layout_width="match_parent"
@@ -200,10 +199,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/white"
                 android:text="Edit Profile"
                 android:textAllCaps="false"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black" />
+                android:textColor="#000000" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvPosts"
