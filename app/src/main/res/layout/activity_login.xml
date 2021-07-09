@@ -132,9 +132,11 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/tvSignUp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
+            android:clickable="true"
             android:text="Sign up."
             android:textColor="@color/blue"
             android:textSize="18sp"
