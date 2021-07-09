@@ -22,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.instagram.EndlessRecyclerViewScrollListener;
 import com.example.instagram.Utils;
+import com.example.instagram.activities.MenuActivity;
 import com.example.instagram.adapters.PostsAdapter;
 import com.example.instagram.databinding.FragmentProfileBinding;
 import com.example.instagram.models.Post;
@@ -79,6 +80,14 @@ public class ProfileFragment extends Fragment {
             binding.swipeContainer.setRefreshing(false);
         });
         binding.swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright);
+
+        binding.ivLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), MenuActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void launchCamera() {
