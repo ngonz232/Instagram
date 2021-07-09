@@ -54,12 +54,15 @@
                     android:background="@drawable/ufi_heart"/>
 
                 <ImageView
+                    android:id="@+id/ivShare"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_margin="10dp"
                     android:layout_alignParentEnd="true"
-                    android:id="@+id/ivShare"
-                    android:background="@drawable/direct"/>
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/newdirect" />
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
