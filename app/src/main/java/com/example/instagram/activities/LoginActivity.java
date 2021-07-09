@@ -28,7 +28,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser(String username, String password) {
-        Toast.makeText(this, "Username or password is incorrect.", Toast.LENGTH_SHORT).show();
         ParseUser.logInInBackground(username, password, (user, e) -> {
             if (e != null) {
                 Toast.makeText(this, "Username or password is incorrect.", Toast.LENGTH_SHORT).show();
