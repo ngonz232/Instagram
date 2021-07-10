@@ -148,7 +148,6 @@ public class ProfileFragment extends Fragment {
                 Log.e(TAG, "Issue with getting posts", e);
                 return;
             }
-            allPosts.clear();
             allPosts.addAll(posts);
             adapter.notifyDataSetChanged();
         });
