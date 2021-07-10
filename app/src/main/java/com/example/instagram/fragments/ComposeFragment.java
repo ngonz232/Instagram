@@ -13,15 +13,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+
 import com.example.instagram.Utils;
+import com.example.instagram.activities.MainActivity;
 import com.example.instagram.databinding.FragmentComposeBinding;
 import com.example.instagram.models.Post;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
+
 import java.io.File;
 
 public class ComposeFragment extends Fragment {
@@ -108,6 +112,11 @@ public class ComposeFragment extends Fragment {
             binding.etDescription.setText("");
             binding.ivPostImage.setImageResource(0);
             binding.pbLoading.setVisibility(View.INVISIBLE);
+            Intent i = new Intent(getContext(), MainActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(i);
         });
     }
+
 }
