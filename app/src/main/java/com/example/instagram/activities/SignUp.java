@@ -20,6 +20,7 @@ public class SignUp extends AppCompatActivity {
     TextView etPasswordSignUp;
     TextView etEmail;
     TextView etPhoneNumber;
+    TextView etPersonsName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class SignUp extends AppCompatActivity {
         etPasswordSignUp = findViewById(R.id.etPasswordSignUp);
         etEmail = findViewById(R.id.etEmail);
         etPhoneNumber = findViewById(R.id.etPhoneNumber);
+        etPersonsName = findViewById(R.id.etPersonsName);
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +44,7 @@ public class SignUp extends AppCompatActivity {
                 user.setEmail(etEmail.getText().toString());
 // Set custom properties
                 user.put("phoneNumber", etPhoneNumber.getText().toString());
+                user.put("fullName", etPersonsName.getText().toString());
 // Invoke signUpInBackground
                 user.signUpInBackground(new SignUpCallback() {
                     public void done(ParseException e) {

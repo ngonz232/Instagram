@@ -76,6 +76,7 @@ public class ProfileFragment extends Fragment {
             Glide.with(this).load(photo.getUrl()).circleCrop().into(binding.ivProfilePhoto);
         }
         binding.tvUsernameToolbar.setText(user.getUsername());
+        binding.tvName.setText(ParseUser.getCurrentUser().getString("fullName"));
         binding.swipeContainer.setOnRefreshListener(() -> {
             allPosts.clear();
             queryPosts(0);

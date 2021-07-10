@@ -1,10 +1,12 @@
 package com.example.instagram.activities;
 
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.os.Bundle;
-import android.util.Log;
+
 import com.bumptech.glide.Glide;
 import com.example.instagram.EndlessRecyclerViewScrollListener;
 import com.example.instagram.adapters.PostsAdapter;
@@ -13,6 +15,7 @@ import com.example.instagram.models.Post;
 import com.parse.ParseFile;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +39,7 @@ public class UserDetailActivity extends AppCompatActivity {
             Glide.with(this).load(profileImage.getUrl()).circleCrop().into(binding.ivProfilePhoto);
         }
 
+        binding.tvName.setText(ParseUser.getCurrentUser().getString("fullName"));
         allPosts = new ArrayList<>();
         GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         adapter = new PostsAdapter( this, allPosts, 1, null);
